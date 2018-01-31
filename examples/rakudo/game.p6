@@ -5,4 +5,5 @@ my $rpg := RP6G.new:
     :game-dir($*PROGRAM.sibling('game').mkdir),
     :world{ rak => 'https://github.com/rakudo/rakudo/' };
 
-$rpg.deploy;
+# $rpg.deploy;
+$rpg.stats: 'rak';

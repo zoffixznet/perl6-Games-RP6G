@@ -11,3 +11,8 @@ has &!cw = &jconf-write.assuming: $!game-dir.add: 'config.json';
 
 has RP6G::Git $.git handles<deploy>
   = RP6G::Git.new: :$!game-dir, :%!world;
+
+method stats ($key where * ∈ %!world.keys) {
+    my @moves := $!git.moves-for: $key;
+    .say for @moves;
+}
