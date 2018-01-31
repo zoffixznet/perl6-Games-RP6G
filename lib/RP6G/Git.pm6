@@ -21,7 +21,8 @@ method deploy {
 method moves-for ($tag where * ∈ %!world.keys) {
     my @moves-raw = map {RP6G::Move.new: :$tag, $_}, split :skip-empty, "\0\0",
     self!run-out: $tag, «git log
-        -z --no-merges --no-color --format=%x00%x00%H%n%aN%n%ae%n%at --numstat
+        -n10
+        -z --no-merges --no-color --format=%x00%x00%H%n%aN%n%ae%n%at%n --numstat
     »;
     @moves-raw;
 }

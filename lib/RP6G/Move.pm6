@@ -12,17 +12,17 @@ has            %.add   is required;
 has            %.del   is required;
 
 method new (Str:D $raw, Str:D :$tag) {
-    my ($sha, $name, $email, $time, $, $changes) = $raw.lines;
+    my ($sha, $name, $email, $time, @changes) = $raw.lines;
     my (%add, %del);
-    with $changes {
-        for $changes.split: :skip-empty, "\0" {
-            my ($add, $del, $file) = split :skip-empty, "\t", $_, 3;
-            $add = 1 without +$add;
-            $del = 1 without +$del;
-            %add{$file} = $add if $add;
-            %del{$file} = $del if $del;
-        }
+    for @changes.join("\0").split: :skip-empty, "\0" -> $change is copy {
+        $change = $change.trim or next;
+        my ($add, $del, $file) = split :skip-empty, "\t", $change, 3;
+        $add = 1 without +$add;
+        $del = 1 without +$del;
+        %add{$file} = $add if $add;
+        %del{$file} = $del if $del;
     }
+
     self.bless: :$tag, :$sha, :$name, :$email, :time(DateTime.new: +$time),
       :add(%add.Map), :del(%del.Map);
 }
