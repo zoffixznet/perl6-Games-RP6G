@@ -1,0 +1,18 @@
+{
+    "perl"         : "6.c",
+    "name"         : "Games::RP6G",
+    "license"      : "Artistic-2.0",
+    "version"      : "1.001004",
+    "description"  : "Role Playing Game based on open source development",
+    "tags"         : [ "games" ],
+    "depends"      : [
+    ],
+    "test-depends" : [
+        "Test::When",
+        "Testo"
+    ],
+    "provides"     : {
+    },
+    "authors"       : ["Zoffix Znet"],
+    "support"       : {"source" : "https://github.com/zoffixznet/perl6-Games-RP6G.git"}
+}

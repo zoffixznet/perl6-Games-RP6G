@@ -2,7 +2,7 @@
 
 # NAME
 
-`Games::RP6G` - 
+`Games::RP6G` -
 
 
 ----
@@ -10,12 +10,12 @@
 #### REPOSITORY
 
 Fork this module on GitHub:
-https://github.com/zoffixznet/perl6-WWW-P6lert
+https://github.com/zoffixznet/perl6-Games-RP6G
 
 #### BUGS
 
 To report bugs or request features, please use
-https://github.com/zoffixznet/perl6-WWW-P6lert/issues
+https://github.com/zoffixznet/perl6-Games-RP6G/issues
 
 #### AUTHOR
 
@@ -29,3 +29,11 @@ distribution for complete details.
 
 The `META6.json` file of this distribution may be distributed and modified
 without restrictions or attribution.
+
+##### Assets
+
+Game assets are available thanks to https://opengameart.org/ with special
+thanks to:
+
+- J. W. Bjerk (eleazzaar) -- www.jwbjerk.com/art
+    ([art used](https://opengameart.org/content/painterly-spell-icons-part-1))
