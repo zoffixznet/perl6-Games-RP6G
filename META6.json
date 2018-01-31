@@ -3,7 +3,7 @@
     "name"         : "Games::RP6G",
     "license"      : "Artistic-2.0",
     "version"      : "1.001004",
-    "description"  : "Role Playing Game based on open source development",
+    "description"  : "Role Playing Game based on Open Source development",
     "tags"         : [ "games" ],
     "depends"      : [
     ],

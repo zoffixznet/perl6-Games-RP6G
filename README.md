@@ -2,7 +2,7 @@
 
 # NAME
 
-`Games::RP6G` -
+`Games::RP6G` - Role Playing Game based on Open Source development
 
 
 ----
