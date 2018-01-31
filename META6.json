@@ -6,6 +6,7 @@
     "description"  : "Role Playing Game based on Open Source development",
     "tags"         : [ "games" ],
     "depends"      : [
+        "Config::JSON"
     ],
     "test-depends" : [
         "Test::When",
