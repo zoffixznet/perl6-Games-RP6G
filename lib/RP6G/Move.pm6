@@ -15,7 +15,9 @@ method new (Str:D $raw, Str:D :$tag) {
     my ($sha, $name, $email, $time, @changes) = $raw.lines;
     my (%add, %del);
     for @changes.join("\0").split: :skip-empty, "\0" -> $change is copy {
-        $change = $change.trim or next;
+        $change = $change.trim;
+        next unless $change and 2 == $change.comb: "\t";
+
         my ($add, $del, $file) = split :skip-empty, "\t", $change, 3;
         $add = 1 without +$add;
         $del = 1 without +$del;
